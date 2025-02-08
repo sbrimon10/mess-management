@@ -134,7 +134,7 @@ Route::get('/meals/{meal_date}/edit', [FoodPreferenceController::class, 'editmea
 
 
 Route::get('/meals', [MealsClosingController::class, 'index'])->name('meals.index');
-Route::get('/reports', [MealsClosingController::class, 'reports'])->name('meals.reports');
+Route::get('/reports', [MealsClosingController::class, 'reports'])->name('meals.reports')->middleware(['auth']);
 
 
 // Route::prefix('user/')->group(function () {
